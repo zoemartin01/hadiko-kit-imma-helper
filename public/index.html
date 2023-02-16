@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HEIDI KIT Imma Helper</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.3.122/pdf.min.js"
+      integrity="sha512-CGtesFWoCAxW8xV1S4wdev6uWmGhkEBtTGJsQLkT75ab0eVyx0RTOdGxHk9hFVV/OlF6ZyCoukfPdiZPpAiUtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://heidi.hadiko.de/favicon.ico"
+    />
+  </head>
+  <body>
+    <h1>Heidi KIT Imma Helper</h1>
+    <br />
+    <noscript>
+      <h2>
+        This page requires JavaScript to work. Please enable JavaScript in your
+        browser.
+      </h2>
+    </noscript>
+    <label for="imma">Upload you certificate of enrollment</label>
+    <input
+      type="file"
+      id="imma"
+      name="imma"
+      onchange="showFile()"
+      accept="application/pdf"
+    />
+    <br />
+    <form method="post" action="https://heidi.hadiko.de/imma/index.php">
+      <input type="text" id="code" name="code" hidden />
+      <label for="zimmer">Room</label>
+      <input type="text" id="zimmer" name="zimmer" />
+      <br />
+      <input type="submit" value="Send to HEIDI" />
+    </form>
+    <div id="messages"></div>
+  </body>
+</html>
